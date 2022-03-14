@@ -1,0 +1,752 @@
+body {
+    background-image: url("../images/moon.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    /* #9c5049d8; */
+    max-width: auto;
+    color: white;
+    margin: auto;
+  }
+  
+  h1{
+  color: rgba(255, 255, 255, 0.795);
+    font-size: 40px;
+    text-align: right;
+    padding-top: 20px;
+    padding-left: 40px;
+    text-shadow:  0 0 20px #fff, 0 0 30px gray, 0 0 40px #5d5fc7, 0 0 50px #24244e, 0 0 60px rgb(58, 55, 55), 0 0 70px rgb(83, 82, 82), 0 0 80px rgb(58, 57, 57);;
+  }
+  
+  h2{
+    border-bottom: 2px solid bisque;
+    margin: 10px;
+    text-align: left;
+  }
+  
+  
+  header{
+    background-image: linear-gradient(to bottom, rgba(11, 11, 12, 0.52), rgba(0, 0, 0, 0.73)), url("../images/galaxy-mountain.jpeg"); background-position: center;
+    height: 80px;
+  }
+  
+  
+  header p{
+    text-align: justify;
+    padding: 0px 20px;
+  }
+  
+  section.company{
+    background-color: rgb(54, 51, 51);
+    width: 80%;
+    text-align: center;
+  }
+  
+  img.avatar{
+    max-width: 100%;
+    border-radius: 50%;
+    border:solid 20px rgba(218, 165, 32, 0.301);
+    border-bottom: solid 10px rgba(0, 0, 0, 0.801);
+    border-top: solid 10px rgba(0, 0, 0, 0.801);
+  }
+  
+  h3{
+    text-align: center;
+  }
+  section{
+    float: left;
+    margin: 10px 30px;
+    width: 80%;
+  }
+  
+  
+  section.education{
+    
+    text-align: center;
+  }
+  
+  section.college p{
+    text-align: center;
+  }
+  
+  footer{
+  max-width: 100%;
+  margin: auto;
+  }
+  
+  
+  footer a{
+  color: white;
+  text-decoration: none;
+  }
+  
+  ul{
+    list-style-type: none;
+  }
+  
+  
+  a{
+    color: rgb(55, 158, 199);
+  }
+  
+  h4, ul{
+    text-align: center;
+    padding: 20px;
+  }
+  
+  
+  
+  img{
+    text-align: center;
+  }
+  ul.desktop {                        /*This section styles the unordered list which will become the menu*/
+     text-align: left;                    /*align text within menu to the left*/
+     list-style: none;   
+     margin-top:0px; 
+     background-image: linear-gradient(to bottom, rgba(29, 29, 34, 0.089), rgb(0, 0, 0)), url("../images/galaxy-mountain.jpeg"); background-position: center;       
+     opacity: 0.90;       /*get rid of the styling (i.e. bullets) in the list*/
+     /*  spacing between links */
+    }
+  ul li {                        /*This section styles the list items (i.e. menu items) */
+     font: bold 14px/24px sans-serif; /*change the font size and type*/
+     display: inline-block;            /*display list items in one line (makes list horizontal)*/
+     position: relative;                /*Will allow submenus to move, letting them open immediately below the different menu items (i.e. a location on the screen relative to the menu item chosen) */
+     padding: 15px 20px;           /*Add padding around the text*/
+     border-right: 1px solid goldenrod;              /*Change background color of the menu items*/
+     cursor: pointer;  
+             /*Change the mouse cursor to a pointer even if the text is not a link (useful for dropdown menus)*/
+     color: white;
+     margin: 1% 2%;
+     
+    }
+  
+  nav {
+  max-width: 100%;   
+  
+  }
+  
+  nav ul{
+  justify-content: space-between;
+  }
+  
+  
+  ul li:hover {                        /*This section styles the menu items when hovered (rolled) over*/
+     background: #555;             /*Change the background color of list item when hovered over*/
+     color: #fff;                        /*Change the color of the text when hovered over*/
+     }
+  ul li ul {                            /*This section styles the unordered list which will become the submenu*/
+     padding: 0;                       /*Get rid of any default padding*/
+     position: absolute;             /*Works in conjunction with the earlier relative positioning code. Distinguishes submenu items from menu items and forces submenus to open in the same position for each menu item (i.e. an absolute position immediately below the menu item)*/
+     top: 48px;                        /*Add a little space between the menu and submenu*/
+     left: -10000px;                 /*Sets submenu way offscreen on the left side so it's hidden from view*/
+     width: 150px;                  /*Set the width for the submenu*/
+     }
+  ul li ul li {                        /*This section styles nested list items (i.e. submenu items) */
+     background: #555;           /*Set background color for submenu items*/
+     display: block;                 /*Display the submenu items as a block - literally displays all submenu items in one large rectangle.*/
+     color: #fff;                     /*Set submenu text color*/
+     }
+  ul li ul li:hover { background: #666; } /*Change submenu item's background color when hovered over*/
+  ul li:hover ul {                 /*This section styles the submenu when a menu item it hovered over*/
+     display: block;                /*Display submenu as a block when the menu item is hovered over*/
+     left :0px;                        /*Moves submenu from way offscreen to its proper location on screen when the menu item is hovered over*/
+     }
+  
+  .grid-container{
+  background-color: black;
+  color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column: 1/3;
+    border-radius: 10%;
+    border: solid 15px rgba(218, 165, 32, 0.301);
+    /*rgba(255, 255, 255, 0.363);*/
+  }
+  
+  .main-container{
+    display: grid;
+    row-gap: 10%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: .5fr repeat(2, 1fr) .5fr .7fr .9fr;
+  }
+  
+  section.creator{
+    grid-column: 1/2;
+  }
+  
+  .grid-header-container{
+    display: none;
+    grid-template-columns: 50px 1fr 2fr;
+    grid-template-rows: 1fr;
+  }
+  
+  div.quote{
+  background-color: rgba(255, 255, 255, 0.877);
+  color: black;
+  grid-column: 2/3;
+  margin-right: 10%;
+  padding-left: 5%;
+  border: solid 15px rgba(218, 165, 32, 0.301);
+  }
+  input[type=text], select, textarea {
+  width: 50%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  }
+  div.quote h2{
+  text-align: center;
+  }
+  .grid-item-1{
+    grid-column: 2 / 3;
+  }
+  
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+  }
+  
+  /* Button styling */
+  .menu-toggle {
+    display: inline-block;
+    padding: .75em 15px;
+    line-height: 1em;
+    font-size: 1em;
+    color: #333;
+  }
+  
+  .menu-toggle:hover,
+  .menu-toggle:focus {
+    color: #c00;
+  }
+  
+  /*
+   Default styles + Mobile first
+   Offscreen menu style
+  */
+  .main-menu {
+    position: absolute;
+    display: none;
+    left: -200px;
+    top: 0;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: visible;
+    transition: left 0.3s ease,
+          box-shadow 0.3s ease;
+    z-index: 999;
+  }
+  
+  .main-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 2.5em 0 0;
+    /* Hide shadow w/ -8px while 'closed' */
+    -webkit-box-shadow: -8px 0 8px rgba(0,0,0,.5);
+       -moz-box-shadow: -8px 0 8px rgba(0,0,0,.5);
+            box-shadow: -8px 0 8px rgba(0,0,0,.5);
+    min-height: 100%;
+    width: 200px;
+    background: #1a1a1a;
+  }
+  
+  .main-menu a {
+    display: block;
+    padding: .75em 15px;
+    line-height: 1em;
+    font-size: 1em;
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid #383838;
+  }
+  
+  .main-menu li:first-child a {
+    border-top: 1px solid #383838;
+  }
+  
+  .main-menu a:hover,
+  .main-menu a:focus {
+    background: #333;
+    text-decoration: underline;
+  }
+  
+  .main-menu .menu-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  
+  /*
+   More to come here...
+  */
+  
+  
+  /*
+   Demo purposes only
+  */
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+  
+  header {
+    padding: 20px;
+    display: flex;
+    align-items: baseline;
+  }
+  
+  article {
+    padding: 30px;
+    width: 55em;
+    font-size: 16px;
+    line-height: 1.5em;
+  }
+  
+  article h2 {
+    font-weight: 500;
+    font-size: 28px;
+  }
+  
+  .logo {
+    margin: 0 30px 0 10px;
+    font-size: 1.5em;
+  }
+  .fa {
+    padding: 20px;
+    font-size: 25px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    padding-left: 8%;
+  }
+  
+  .fa-facebook {
+    color: white;
+  }
+  
+  .fa-twitter {
+    color: white;
+  }
+  .fa-linkedin {
+    color: white;
+  }
+  div.headerbox{
+    display: none;
+  }
+  
+  .grid-portfolio{
+    background-color: black;
+    grid-column: 1/3;
+    display: grid;
+    grid-gap: 5%;
+    grid-template-rows: .25fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    color: white;
+    
+    border: solid 15px rgba(218, 165, 32, 0.301);
+  }
+  
+  .grid-portfolio-item1{
+      grid-row: 1/2;
+      grid-column: 1/4;
+  }
+  .grid-portfolio-item4{
+      grid-row: 2/3;
+      grid-column: 1/2;
+  }
+  .grid-portfolio-item3{
+      grid-row: 2/3;
+      grid-column: 3/4;
+  }
+  .grid-portfolio-item2{
+    grid-row: 2/3;
+    grid-column: 2/3;
+  }
+  
+  img.grid-img{
+    width: 100%;
+    max-width: 95%;
+    border-radius: 10%;
+    margin: 0px 10px 70px 10px;
+  }
+  
+  div.languages{
+    color: white;
+    grid-column: 1/3;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: .2fr .3fr;
+    
+    border-radius: 10%;
+  }
+  
+  div.lg-heading{
+    grid-column: 1/3;
+    padding-left: 5%;
+  }
+  
+  div.html{
+    grid-column: 1/2;
+  }
+  
+  div.css{
+    grid-column: 2/3;
+  }
+  
+  div.Javascript{
+    grid-column: 3/4;
+  }
+  div.languages img{
+    max-width: 100%;
+    grid-row: 3/4;
+    grid-column: 1/3;
+    width: 70%;
+    padding-left: 20%;
+    height: 80%;
+  }
+  
+  .grid-services{
+    display: grid;
+    grid-template-columns: .5fr repeat(3, 1fr) .5fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
+  
+  .grid-services h2{
+    text-align: center;
+  }
+  
+  .grid-services-basic ul li, .grid-services-standard ul li, .grid-services-premium ul li{
+    border-right: none;
+  }
+  .grid-services-basic{
+    grid-column: 2/3;
+    border: 2px solid white;
+    margin-right: 5%;
+    margin-bottom: 10%;
+  }
+  
+  .grid-services-standard{
+    border: 2px solid white;
+    margin-right: 5%;
+    margin-bottom: 10%;
+  }
+  
+  .grid-services-premium{
+    border: 2px solid white;
+    margin-bottom: 10%;
+  }
+  
+  .quote-services{
+    grid-column: 2/6;
+    width: 100%;
+  }
+  
+  .bootstrap-portfolio{
+    margin-top: 5%;
+    margin-right: 5%;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 20px;
+    column-gap: 80px;
+    width: 90%;
+    float: right;
+  }
+  
+  .bootstrap-portfolio h3{
+    text-align: right;
+  
+  }
+  
+  .bootstrap-portfolio p{
+    text-align: right;
+  }
+  
+  .grid-viciouscycles{
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
+  
+  .grid-creation{
+    grid-column: 2/3;
+  }
+  
+  .grid-ozu{
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  
+  .grid-island{
+    grid-column: 2/3;
+  }
+  
+  .grid-color{
+    grid-column: 3/4;
+  }
+  
+  .grid-contact img{
+    margin: 0px 20%;
+    border-radius: 50%;
+  }
+  
+  .grid-contact p{
+    text-align: center;
+  }
+  
+  .button {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: rgb(138, 106, 24);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px rgb(99, 96, 96);
+    width: 38%;
+    margin: 0px 40% 20% 40%;
+  }
+   #vicious{
+     background-color: rgb(5, 88, 5);
+   }
+  
+   #ozu{
+     background-color: rgb(7, 7, 82);
+   }
+  
+  .button:hover {background-color: #3e8e41}
+  
+  .button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+  .button a{
+    text-decoration: none;
+    color: white;
+  }
+  @media screen and (min-width: 500px){
+  
+    footer .fa{
+      display:none;
+    }
+  
+    header h1{
+      display: none;
+    }
+  
+    #portfolio{
+      display: none;
+    }
+  
+  
+  }
+  @media screen and (max-width: 500px){
+    nav .fa{
+      display: none;
+    }
+    .grid-container{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: .15fr .2fr;
+      grid-row: 1/2;
+  }
+  
+    .main-container{
+        display: grid;
+        grid-template-rows: .3fr .3fr .5fr .3fr .2fr;
+        grid-gap: 2%;
+    }
+  
+  nav h1{
+    text-align: center;
+  }
+  
+  img.avatar{
+    border: none;
+  }
+  ul li {                       
+  font: bold 12px/22px sans-serif;
+  padding: 10px 15px;           /*Add padding around the text*/
+  border: none;              /*Change background color of the menu items*/
+  }
+  nav ul{
+    background-color: black;
+  }
+  
+  section.aboutcreator{
+    grid-row: 2/3;
+  }
+  
+  section.creator{
+    grid-row: 1/2;
+  }
+  
+  section.portfolio{
+    grid-column: 1/3;
+    margin-top: 10px;
+  }
+  
+  .grid-portfolio{
+    border-top: solid 15px rgba(218, 165, 32, 0.301);
+    border-bottom: solid 10px rgba(218, 165, 32, 0.301);
+    border-left: none;
+    border-right: none;
+      overflow: scroll;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: .05fr repeat(3, .3fr);
+      padding: 5% 0%; 
+  }
+  
+  .grid-portfolio-item1{
+      grid-row: 1/2;
+      grid-column: 1/2;
+  }
+  .grid-portfolio-item4{
+      grid-row: 2/3;
+      grid-column: 1/2;
+  }
+  
+  .grid-portfolio-item3{
+      grid-column: 1/2;
+      grid-row:4/5;
+  }
+  
+  .grid-portfolio-item2{
+      grid-row: 3/4;
+      grid-column: 1/2;
+  }
+  
+  img.grid-img{
+    max-width: 80%;
+    margin: 0px 10px 40px 10px;
+  }
+  .grid-container{
+      background-color: black;
+      color: white;
+      border-left: none;
+      border-right: none;
+      border-bottom: none;
+  }
+  
+  div.languages{
+    color: white;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: .2fr repeat(3, 20%);
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+  }
+  
+  div.lg-heading{
+    grid-row: 1/3;
+  }
+  
+  div.html{
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  
+  div.css{
+    grid-column: 1/3;
+    grid-row: 3/4;
+  }
+  
+  div.Javascript{
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
+  
+  div.php{
+    grid-column: 1/2;
+    grid-row: 5/6;
+  }
+  
+  div.languages img{
+    width: 100%;
+    height: 30%;
+    padding-left: 8%;
+  }
+  
+  div.quote{
+    grid-row: 4/5;
+    grid-column: 1/3;
+    margin: 0px 5%;
+  }
+  
+  #ozu{
+    display: none;
+  }
+  
+  #blue{
+    display: none;
+  }
+  
+  #vicious{
+    display: none;
+  }
+  .button{
+    box-shadow: 0 4px rgb(0, 0, 0);
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: rgb(138, 106, 24);
+    border: none;
+    border-radius: 15px;
+    width: 38%;
+    margin: 0px 40% 20% 40%;
+  }
+  .bootstrap-portfolio{
+    margin-top: 5%;
+    margin-right: 5%;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr 1fr;
+    row-gap: 20px;
+    column-gap: 80px;
+    width: 90%;
+    float: right;
+  }
+  .grid-viciouscycles{
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .grid-creation{
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  .grid-ozu{
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .grid-island{
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  .grid-color{
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  }
